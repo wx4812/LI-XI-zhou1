@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>菏泽旅行推荐 App 预览</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+    }
+    .phone {
+      width: min(430px, 100vw);
+      min-height: 100vh;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 32px rgba(20, 35, 70, .16);
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 26px 18px 12px;
+      background: linear-gradient(180deg, #fff, #fff8fb);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      border-bottom: 1px solid #f0d8e4;
+    }
+    h1 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.2;
+      color: #1f2b4d;
+    }
+    .sub {
+      margin-top: 6px;
+      color: #6a7282;
+      font-size: 13px;
+    }
+    main {
+      padding: 14px 16px 92px;
+      flex: 1;
+      overflow: auto;
+    }
+    .hero {
+      height: 205px;
+      padding: 22px;
+      border-radius: 24px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, #b83268, #f59ab4 54%, #68c4d1);
+    }
+    .hero::after {
+      content: "✿";
+      position: absolute;
+      right: -20px;
+      bottom: -58px;
+      font-size: 180px;
+      opacity: .28;
+    }
+    .hero strong {
+      display: block;
+      font-size: 34px;
+      font-weight: 900;
+    }
+    .hero span { font-weight: 700; }
+    .title {
+      margin: 18px 0 10px;
+      font-size: 20px;
+      font-weight: 900;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .card {
+      border: 1px solid rgba(20, 30, 55, .08);
+      border-radius: 18px;
+      padding: 15px;
+      margin-bottom: 12px;
+      background: #fff;
+      line-height: 1.65;
+      box-shadow: 0 8px 18px rgba(20, 35, 70, .06);
+    }
+    .pink { background: #fff4f8; }
+    .blue { background: #eef7ff; }
+    .green { background: #ecfaef; }
+    .yellow { background: #fff7df; }
+    .orange { background: #fff0df; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .feature {
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      background: #fff;
+      color: #b83268;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .feature b, .place b, .food b, .route b { font-size: 18px; }
+    .tag {
+      float: right;
+      background: #fff;
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .page { display: none; }
+    .page.active { display: block; }
+    nav {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: min(430px, 100vw);
+      height: 76px;
+      background: rgba(255,255,255,.96);
+      border-top: 1px solid #eadce4;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      backdrop-filter: blur(12px);
+    }
+    button {
+      border: 0;
+      background: transparent;
+      color: #687084;
+      font: inherit;
+      font-size: 11px;
+      display: grid;
+      place-items: center;
+      gap: 2px;
+      cursor: pointer;
+    }
+    button span { font-size: 23px; }
+    button.active {
+      color: #b83268;
+      font-weight: 900;
+    }
+    .route {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+    .time {
+      color: #b83268;
+      font-weight: 900;
+      text-align: center;
+      padding-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <header>
+      <h1 id="pageTitle">菏泽，中国牡丹之都</h1>
+      <div class="sub" id="pageSub">山东西南部的花城、古城与美食小旅行</div>
+    </header>
+    <main>
+      <section class="page active" data-title="菏泽，中国牡丹之都" data-sub="山东西南部的花城、古城与美食小旅行">
+        <div class="hero">
+          <strong>菏泽 Heze</strong>
+          <span>牡丹花开的时候，这座城市最浪漫。</span>
+        </div>
+        <div class="title">📍 家乡地区介绍</div>
+        <div class="card pink">菏泽位于山东省西南部，古称曹州。这里以牡丹闻名，也有黄河文化、鲁西南民俗和丰富的小吃。春天看牡丹，平时可以逛古城、看湖景、吃羊肉汤，是适合周末旅行的城市。</div>
+        <div class="title">⭐ 旅行亮点</div>
+        <div class="grid">
+          <div class="card feature"><div><span class="icon">花</span><br><b>牡丹文化</b></div><span>4月牡丹花会最有代表性</span></div>
+          <div class="card feature"><div><span class="icon">古</span><br><b>历史人文</b></div><span>曹州古城、孙膑文化值得了解</span></div>
+          <div class="card feature"><div><span class="icon">食</span><br><b>鲁西南味道</b></div><span>羊肉汤、烧饼、单县美食</span></div>
+          <div class="card feature"><div><span class="icon">拍</span><br><b>拍照友好</b></div><span>花海、湖景、古风建筑都好出片</span></div>
+        </div>
+      </section>
+
+      <section class="page" data-title="菏泽代表旅游景点" data-sub="牡丹、古城、湖景和传统文化">
+        <div class="card pink place"><span class="tag">必去</span><b>🌸 曹州牡丹园</b><br>菏泽最有名的牡丹观赏地。每年4月前后花开时，园内颜色层次丰富，适合拍照和了解牡丹文化。<br><b>提示：</b>建议上午入园，光线柔和，人也相对少。</div>
+        <div class="card blue place"><span class="tag">城市漫步</span><b>🏛 曹州古城</b><br>古城街区适合散步、拍古风照片，也能看到菏泽传统城市记忆。<br><b>提示：</b>傍晚去更有氛围，可以顺便吃晚饭。</div>
+        <div class="card green place"><span class="tag">休闲</span><b>🌿 天香公园</b><br>市区内比较轻松的公园，适合短暂停留、散步和拍城市风景。<br><b>提示：</b>适合放在一日游路线的中间休息点。</div>
+      </section>
+
+      <section class="page" data-title="菏泽代表美食" data-sub="热汤、面食和鲁西南家常味">
+        <div class="card yellow food"><b>单县羊肉汤</b><br>汤色浓白，味道鲜香，是菏泽最有代表性的美食之一。冬天喝很暖，早饭或午饭都合适。</div>
+        <div class="card orange food"><b>曹县烧饼</b><br>外皮焦香，适合搭配汤类或小菜。它体现了鲁西南地区朴素又扎实的面食文化。</div>
+        <div class="card blue food"><b>郓城壮馍</b><br>个头大、馅料足，口感香脆。适合想体验地方小吃的游客尝试。</div>
+        <div class="card pink food"><b>牡丹糕点</b><br>以牡丹元素做成的伴手礼，适合送朋友，也能体现菏泽“牡丹之都”的城市名片。</div>
+      </section>
+
+      <section class="page" data-title="推荐旅行路线" data-sub="1日轻旅行，适合第一次来菏泽">
+        <div class="card route"><div class="time">09:00</div><div><b>曹州牡丹园</b><br>上午赏牡丹、拍照，了解菏泽牡丹文化。</div></div>
+        <div class="card route"><div class="time">12:00</div><div><b>单县羊肉汤午餐</b><br>选择当地羊肉汤店，体验菏泽代表味道。</div></div>
+        <div class="card route"><div class="time">14:00</div><div><b>天香公园</b><br>饭后休息散步，看湖景与城市生活。</div></div>
+        <div class="card route"><div class="time">17:00</div><div><b>曹州古城</b><br>傍晚逛古城，拍照、吃小吃，结束一天路线。</div></div>
+        <div class="card blue">路线特点：这条路线把“花、食、景、城”连在一起，交通压力小，适合游客第一次认识菏泽。</div>
+      </section>
+
+      <section class="page" data-title="AI 使用内容" data-sub="按作业要求说明 AI 如何辅助项目">
+        <div class="card"><b>文案整理</b><br>使用 AI 帮助整理菏泽简介、景点介绍、美食介绍和路线说明，再由本人检查并改成适合 App 的简短中文。</div>
+        <div class="card"><b>页面设计</b><br>使用 AI 参考“牡丹、城市旅行、清爽卡片式页面”的方向，设计粉色、蓝色、绿色搭配的界面风格。</div>
+        <div class="card"><b>路线规划</b><br>使用 AI 生成一日游路线草稿，然后根据菏泽特色调整为“牡丹园-美食-公园-古城”。</div>
+        <div class="card yellow"><b>项目执行心得</b><br>通过这个 App，我把自己的家乡菏泽整理成了适合游客阅读的旅行推荐页面，也练习了 Flutter 的底部导航、卡片布局、图标和响应式页面设计。</div>
+      </section>
+    </main>
+    <nav>
+      <button class="active"><span>🏠</span>菏泽介绍</button>
+      <button><span>🏯</span>代表景点</button>
+      <button><span>🍜</span>代表美食</button>
+      <button><span>🗺</span>推荐路线</button>
+      <button><span>✨</span>AI说明</button>
+    </nav>
+  </div>
+  <script>
+    const buttons = [...document.querySelectorAll("button")];
+    const pages = [...document.querySelectorAll(".page")];
+    const title = document.querySelector("#pageTitle");
+    const sub = document.querySelector("#pageSub");
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        buttons.forEach(item => item.classList.remove("active"));
+        pages.forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+        pages[index].classList.add("active");
+        title.textContent = pages[index].dataset.title;
+        sub.textContent = pages[index].dataset.sub;
+      });
+    });
+  </script>
+</body>
+</html>
